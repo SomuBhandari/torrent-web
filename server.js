@@ -29,7 +29,7 @@ io.on('connection', function (socket) {
 	if (client && client.files.length) socket.emit('torrent', torrentRepresentation());
 	else socket.emit('no-torrent');
 	socket.on('add-torrent', addTorrent);
-	socket.on('remove-torrent', removeTorrent);
+	// socket.on('remove-torrent', removeTorrent);
 });
 
 app.get('/torrent/:filename', function(req, res) {
