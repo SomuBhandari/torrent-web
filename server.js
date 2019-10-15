@@ -69,7 +69,7 @@ function findFile(filename) {
 }
 
 function addTorrent(incoming) {
-	removeTorrent();
+	// removeTorrent();
 	url = incoming;
 	if (url.indexOf('magnet:') === 0) createTorrentEngine(url);
 	else {
@@ -87,7 +87,7 @@ function removeTorrent() {
 
 		io.emit('torrent-removed');
 	}
-	// deleteFiles();
+	deleteFiles();
 }
 
 //===============================
