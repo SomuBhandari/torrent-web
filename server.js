@@ -87,7 +87,7 @@ function removeTorrent() {
 
 		io.emit('torrent-removed');
 	}
-	deleteFiles();
+	// deleteFiles();
 }
 
 //===============================
