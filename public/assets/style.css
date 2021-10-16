@@ -35,7 +35,9 @@ md-content {
 .torrents-page {
     padding: 35px 0;
 }
-
+a{
+    color: grey !important;
+}
 .torrents-page h1 {
     margin: 40px;
 }
