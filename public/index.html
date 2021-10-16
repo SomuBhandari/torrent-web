@@ -40,7 +40,7 @@
                 </h1>
                 <div class="table-responsive-vertical shadow-z-1">
                 <!-- Table starts here -->
-                <table id="table" class="table table-mc-light-blue">
+                <table id="table" class="table table-mc-light-blue table-responsive">
                     <thead>
                         <tr>
                             <th>Filename</th>
@@ -51,7 +51,7 @@
                     <tbody>
                         <tr>
                             <td data-title="Download all files as zip">
-                              <a flex class="zip-download" ng-href="torrent/{{file.name}}" download="{{file.name}}" aria-label="Download as zip">Download all files as .zip</a>
+                              <a flex class="zip-download" ng-href="torrent/{{file.name}}" download="{{file.name}}" aria-label="Download as zip">Download all files as zip</a>
                             </td>
                             <td colspan="2">
                               <a flex class="zip-download" ng-href="torrent/{{file.name}}" download="{{file.name}}" aria-label="Download as zip">
@@ -60,8 +60,8 @@
                             </td>
                         </tr>
                         <tr ng-repeat="file in m.torrent.files">
-                            <td data-title="Filename"><a flex ng-href="torrent/{{file.name}}" download="{{file.name}}">{{file.name}}</a></td>
-                            <td data-title="Size"><span>{{size(file.length, 1)}}</span></td>
+                            <td data-title="Filename"><a flex ng-href="torrent/{{file.name}}" download="{{file.name}}">{file.name}</a></td>
+                            <td data-title="Size"><span>{size(file.length, 1)}</span></td>
                             <td data-title="Download">
                               <a flex ng-href="torrent/{{file.name}}" download="{{file.name}}">
                                 <md-icon class="material-icons">file_download</md-icon>
@@ -74,12 +74,12 @@
             </md-content>
         </div>
 
-        <!-- <md-button class="md-icon-button back-button" aria-label="Cancel" ng-click="back();" ng-if="m.torrent || m.submitting">
+        <md-button style="float: right; margin-top:100px; padding-left:0;" class="md-icon-button back-button" aria-label="Cancel" ng-click="back();" ng-if="m.torrent || m.submitting">
             <md-tooltip md-direction="right">
                 Go Back. Stops torrent
             </md-tooltip>
             <md-icon class="material-icons">keyboard_backspace</md-icon>
-        </md-button> -->
+        </md-button>
 
         <script src="socket.io/socket.io.js"></script>
         <script src="bower_components/angular/angular.min.js"></script>
